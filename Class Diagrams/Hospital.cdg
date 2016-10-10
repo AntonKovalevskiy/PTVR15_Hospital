@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Hospital">
+  <ClassDiagramComponents>
+    <Class name="Doktor" package="" visibility="public" xPosition="657.0" yPosition="26.0">
+      <Fields>
+        <Field name="salary" type="Integer" visibility="private"/>
+        <Field name="specialization" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="Employee" package="" visibility="public" xPosition="116.0" yPosition="26.0">
+      <Methods>
+        <Method name="getSalary" returnType="Integer" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Person" package="" visibility="public" xPosition="476.0" yPosition="445.0">
+      <Fields>
+        <Field name="firstname" type="String" visibility="private"/>
+        <Field name="lastname" type="String" visibility="private"/>
+        <Field name="code" type="String" visibility="private"/>
+        <Field name="age" type="Integer" visibility="private"/>
+        <Field name="birthday" type="String" visibility="private"/>
+        <Field name="sex" type="String" visibility="private"/>
+        <Field name="day" type="Integer" visibility="private"/>
+        <Field name="month" type="Integer" visibility="private"/>
+        <Field name="year" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Nurse" package="" visibility="public" xPosition="686.0" yPosition="181.0">
+      <Fields>
+        <Field name="salary" type="Integer" visibility="private"/>
+        <Field name="status" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Sanitar" package="" visibility="public" xPosition="151.0" yPosition="211.0">
+      <Fields>
+        <Field name="salary" type="Integer" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Pacient" package="" visibility="public" xPosition="419.0" yPosition="194.0">
+      <Fields>
+        <Field name="diagnos" type="String" visibility="private"/>
+        <Field name="department" type="String" visibility="private"/>
+        <Field name="timeArrival" type="Date" visibility="private"/>
+        <Field name="timeOfDeparture" type="Date" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ParseCode" package="" visibility="public" xPosition="961.0" yPosition="37.0">
+      <Fields>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Department" package="" visibility="public" xPosition="1246.0" yPosition="207.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="doctors" type="List" visibility="private"/>
+        <Field name="nurses" type="List" visibility="private"/>
+        <Field name="pacients" type="List" visibility="private"/>
+        <Field name="sanitars" type="List" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+        <Method name="untitledMethod1" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Palata" package="" visibility="public" xPosition="985.0" yPosition="302.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Sanitar" target="Person"/>
+    <IsRelation name="is" source="Nurse" target="Person"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Nurse" target="Employee"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Doktor" target="Employee"/>
+    <IsRelation name="is" source="Palata" target="Person"/>
+    <IsRelation name="is" source="Doktor" target="Person"/>
+    <IsRelation name="is" source="Pacient" target="Person"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Sanitar" target="Employee"/>
+    <UseRelation name="parseCode" source="Person" target="ParseCode" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
